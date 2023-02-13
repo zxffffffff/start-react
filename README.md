@@ -1,4 +1,15 @@
 # start-react
- 一个 react 脚手架项目，使用 VS Code + Node.js 开发
-- 运行 `npx create-react-app my-app` 创建项目
-- 运行 `npm start` 运行，在浏览器中查看和调试
+ 一个 Web App 脚手架项目，使用 react + antd 构建
+- 运行 `npm start` 运行
+
+## react
+- Facebook 开源 js 框架。
+- 参考：https://github.com/facebook/react
+- 创建：`npx create-react-app my-app` 
+
+## antd (Ant Design)
+- 一套企业级 UI 设计语言和 React 组件库。（兼容 Electron）
+- 参考：https://github.com/ant-design/ant-design
+  - https://ant.design/components/overview-cn
+- 安装：`npm install antd --save`
+- 使用：`import { Button, DatePicker } from 'antd';`
