@@ -6,6 +6,9 @@ class MainPage extends React.Component {
     return (
       <div className="MainPage">
         <p>
+          this is {this.props.page} page.
+        </p>
+        <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -21,7 +24,7 @@ class MainPage extends React.Component {
           type="primary"
           onClick={(event) => { this.props.onClickPage("antd"); }}
         >
-          切换Page antd
+          切换 page
         </Button>
       </div>
     );

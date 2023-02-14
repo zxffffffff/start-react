@@ -1,55 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import MainPage from './page/MainPage';
 import AntdPage from './page/AntdPage';
 
-class App extends React.Component {
-  state = {
-    page: "main",
+function App() {
+  // 使用 hooks 代替 state = { page: "main" };
+  const [page, setPage] = useState("main");
+
+  const handleClickPage = (page) => {
+    // 使用 hooks 代替 this.setState({ page });
+    setPage(page);
   }
 
-  constructor(props) {
-    super(props);
-
-    // 为了在回调中使用 `this`，这个绑定是必不可少的
-    this.handleClickPage = this.handleClickPage.bind(this);
-  }
-
-  handleClickPage(page) {
-    this.setState({ page });
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {
-            this.routerPage()
-          }
-        </header>
-      </div>
-    );
-  }
-
-  routerPage() {
-    switch (this.state.page.toLowerCase()) {
+  const routerPage = () => {
+    switch (page.toLowerCase()) {
       case "main": return (
         <MainPage
-          onClickPage={this.handleClickPage}
+          page={page}
+          onClickPage={handleClickPage}
         />
       )
       case "antd": return (
         <AntdPage
-          onClickPage={this.handleClickPage}
+          page={page}
+          onClickPage={handleClickPage}
         />
       )
       default: return (
-        <>404</>
+        <div>404</div>
       )
     }
   }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        {
+          routerPage()
+        }
+      </header>
+    </div>
+  );
 }
 
 export default App;
