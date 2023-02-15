@@ -5,11 +5,9 @@ import MainPage from './page/MainPage';
 import AntdPage from './page/AntdPage';
 
 function App() {
-  // 使用 hooks 代替 state = { page: "main" };
   const [page, setPage] = useState("main");
 
   const handleClickPage = (page) => {
-    // 使用 hooks 代替 this.setState({ page });
     setPage(page);
   }
 
