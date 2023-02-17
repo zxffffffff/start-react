@@ -13,3 +13,8 @@
   - https://ant.design/components/overview-cn
 - 安装：`npm install antd --save`
 - 使用：`import { Button, DatePicker } from 'antd';`
+
+## next.js
+- Web Server 框架，搭配 react 使用。
+- 参考：https://nextjs.org/learn/basics/create-nextjs-app/setup
+- 安装：` npx create-next-app@latest nextjs-app --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter" `
