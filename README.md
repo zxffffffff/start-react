@@ -1,6 +1,12 @@
 # start-react
- 一个 Web App 脚手架项目，使用 react + antd 构建
-- 运行 `npm start` 运行
+ 一个 react + antd 脚手架项目，使用 next.js 发布
+- 运行 `npm run dev` 运行
+
+## next.js
+- Web Server 框架，搭配 react 使用。
+- 参考：https://nextjs.org/learn/basics/create-nextjs-app/setup
+  - https://nextjs.org/docs/advanced-features/debugging
+- 安装：`npx create-next-app@latest nextjs-app --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"`
 
 ## react
 - Facebook 开源 js 框架。
@@ -13,8 +19,3 @@
   - https://ant.design/components/overview-cn
 - 安装：`npm install antd --save`
 - 使用：`import { Button, DatePicker } from 'antd';`
-
-## next.js
-- Web Server 框架，搭配 react 使用。
-- 参考：https://nextjs.org/learn/basics/create-nextjs-app/setup
-- 安装：` npx create-next-app@latest nextjs-app --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter" `

@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Button } from 'antd';
+import { Button } from 'antd';
 import Link from 'next/link';
 
 class MainPage extends React.Component {
@@ -7,7 +7,7 @@ class MainPage extends React.Component {
     return (
       <div className="MainPage">
         <p>
-          this is {this.props.page} page.
+          this is xxx page.
         </p>
         <Link href="/">Back to home</Link>
         <p>
@@ -22,12 +22,14 @@ class MainPage extends React.Component {
           Learn React
         </a>
         <br />
-        {/* <Button
-          type="primary"
-          onClick={(event) => { this.props.onClickPage("antd"); }}
-        >
-          切换 page
-        </Button> */}
+        {
+          <Button
+            type="primary"
+            onClick={(event) => { console.log("this is antd Button onClick") }}
+          >
+            antd Button
+          </Button>
+        }
       </div>
     );
   }
