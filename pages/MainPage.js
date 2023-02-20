@@ -1,14 +1,16 @@
+import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import { Button } from 'antd';
-import Link from 'next/link';
 
 class MainPage extends React.Component {
   render() {
     return (
       <div className="MainPage">
-        <p>
-          this is xxx page.
-        </p>
+        <Head>
+          <title>MainPage</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Link href="/">Back to home</Link>
         <p>
           Edit <code>src/App.js</code> and save to reload.
