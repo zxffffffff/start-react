@@ -13,13 +13,13 @@ npm install -g create-react-app
 ```
 - 创建项目
 ```bash
-npx create-react-app my-app
-cd my-app
+npx create-react-app start-web-react --template typescript
+cd start-web-react
 npm start
 ```
 - 管理项目
 ```bash
-npm start     # 开发模式运行 http://localhost:3000
+npm start     # 开发模式
 npm test      # 单元测试
-npm run build # 生产模式打包 build 文件夹
+npm run build # 打包生产（build 文件夹）
 ```
