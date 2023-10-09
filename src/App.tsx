@@ -1,9 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { DatePicker } from 'antd';
-import Game from './TicTacToe';
-import FilterableProductTable from './FilterableProductTable';
+import Game from './components/TicTacToe';
+import FilterableProductTable from './components/FilterableProductTable';
+import AntdDemo from './components/AntdDemo';
+import Layout, { Content, Header } from 'antd/es/layout/layout';
+import { Col, Divider, Row } from 'antd';
+
+function ReactComp() {
+  return <>
+    JSX 虽然看起来很像 HTML，但在底层其实被转化为了 JavaScript 对象，
+    你不能在一个函数中返回多个对象，除非用一个数组把他们包装起来。
+    这就是为什么多个 JSX 标签必须要用一个父元素或者 Fragment 来包裹。
+  </>
+}
 
 // React 组件名称必须始终以大写字母开头，而 HTML 标签必须小写。
 function MyButton() {
@@ -44,7 +54,7 @@ function MyButton() {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -57,20 +67,27 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      <h1>
-        <DatePicker />
-      </h1>
-      <h1>
-        <MyButton />
-        <MyButton />
-      </h1>
-      <h1>
-        <Game />
-      </h1>
-      <h1>
-        <FilterableProductTable />
-      </h1>
+      </Header>
+      <Layout>
+        <Content>
+          <Divider />
+          <p>
+            <MyButton />
+            <MyButton />
+          </p>
+          <Divider />
+          <Row gutter={[16, 16]}>
+            <Col span={8}>
+              <Game />
+            </Col>
+            <Col span={8}>
+              <FilterableProductTable />
+            </Col>
+          </Row>
+          <Divider />
+          <AntdDemo />
+        </Content>
+      </Layout>
     </div>
   );
 }

@@ -37,6 +37,7 @@ npm run build # 打包生产（build 文件夹）
 ### 安装
 ```bash
 npm install antd --save
+npm install @ant-design/icons --save # 可选-图标组件包
 ```
 
 ### 使用组件
