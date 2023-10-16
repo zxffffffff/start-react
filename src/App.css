@@ -1,6 +1,8 @@
+/* 向下传递（子元素继承父元素）
 .App {
   text-align: center;
 }
+*/
 
 .App-logo {
   height: 40vmin;
@@ -32,6 +34,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

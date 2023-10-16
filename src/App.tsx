@@ -71,6 +71,7 @@ function App() {
       </Header>
       <Layout>
         <Content>
+          <ReactComp />
           <Divider />
           <p>
             <MyButton />
