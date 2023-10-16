@@ -6,6 +6,7 @@ import FilterableProductTable from './components/FilterableProductTable';
 import AntdDemo from './components/AntdDemo';
 import Layout, { Content, Header } from 'antd/es/layout/layout';
 import { Col, Divider, Row } from 'antd';
+import CodeEditor from './components/CodeEditor';
 
 function ReactComp() {
   return <>
@@ -86,6 +87,8 @@ function App() {
           </Row>
           <Divider />
           <AntdDemo />
+          <Divider />
+          <CodeEditor />
         </Content>
       </Layout>
     </div>
