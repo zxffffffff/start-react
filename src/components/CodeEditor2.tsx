@@ -12,7 +12,7 @@ class CodeEditor extends React.Component {
   constructor() {
     super();
     this.state = {
-      code: "// type your code... \n",
+      code: "// type your code... \\n",
       theme: "vs-light",
     };
   }
@@ -29,12 +29,12 @@ class CodeEditor extends React.Component {
 
   changeEditorValue = () => {
     if (this.editor) {
-      this.editor.setValue("// code changed! \n");
+      this.editor.setValue("// code changed! \\n");
     }
   };
 
   changeBySetState = () => {
-    this.setState({ code: "// code changed by setState! \n" });
+    this.setState({ code: "// code changed by setState! \\n" });
   };
 
   setDarkTheme = () => {

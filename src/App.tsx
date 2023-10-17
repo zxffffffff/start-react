@@ -8,6 +8,8 @@ import Layout, { Content, Header } from 'antd/es/layout/layout';
 import { Col, Divider, Row } from 'antd';
 import CodeEditor from './components/CodeEditor';
 import CodeEditor2 from './components/CodeEditor2';
+import RichEditor from './components/RichEditor';
+import MarkDown from './components/MarkDown';
 
 function ReactComp() {
   return <>
@@ -93,6 +95,10 @@ function App() {
           <CodeEditor />
           <Divider />
           <CodeEditor2 />
+          <Divider />
+          <RichEditor />
+          <Divider />
+          <MarkDown />
         </Content>
       </Layout>
     </div>
