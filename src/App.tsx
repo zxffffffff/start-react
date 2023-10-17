@@ -7,6 +7,7 @@ import AntdDemo from './components/AntdDemo';
 import Layout, { Content, Header } from 'antd/es/layout/layout';
 import { Col, Divider, Row } from 'antd';
 import CodeEditor from './components/CodeEditor';
+import CodeEditor2 from './components/CodeEditor2';
 
 function ReactComp() {
   return <>
@@ -79,10 +80,10 @@ function App() {
           </p>
           <Divider />
           <Row gutter={[16, 16]}>
-            <Col span={8}>
+            <Col span={12}>
               <Game />
             </Col>
-            <Col span={8}>
+            <Col span={12}>
               <FilterableProductTable />
             </Col>
           </Row>
@@ -90,6 +91,8 @@ function App() {
           <AntdDemo />
           <Divider />
           <CodeEditor />
+          <Divider />
+          <CodeEditor2 />
         </Content>
       </Layout>
     </div>

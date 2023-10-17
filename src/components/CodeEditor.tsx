@@ -18,6 +18,6 @@ export default function CodeEditor() {
     })}
     extensions={[javascript({ jsx: true })]}
     value={value}
-    height="500px"
+    height="200px"
     onChange={onChange} />;
 }
