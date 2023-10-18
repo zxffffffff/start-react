@@ -42,3 +42,14 @@ npm install @ant-design/icons --save # 可选-图标组件包
 
 ### 使用组件
 - 参考：https://ant-design.antgroup.com/components/overview-cn/
+
+## 路由
+- "/"
+  - "about"
+  - "dashboard/*"
+    - "/"
+    - "react-demo"
+    - "antd-demo"
+    - "editor-demo"
+    - "*" 404
+  - "*" 404
