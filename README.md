@@ -44,6 +44,7 @@ npm install @ant-design/icons --save # 可选-图标组件包
 - 参考：https://ant-design.antgroup.com/components/overview-cn/
 
 ## 路由
+- 安装：`npm i react-router-dom`
 - "/"
   - "about"
   - "dashboard/*"

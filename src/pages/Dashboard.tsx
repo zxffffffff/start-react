@@ -51,6 +51,9 @@ function DashboardLayout() {
           <li>
             <Link to="/dashboard/editor-demo">Editor Demo</Link>
           </li>
+          <li>
+            <Link to="/dashboard/abc123">404</Link>
+          </li>
         </ul>
       </nav>
       <hr />

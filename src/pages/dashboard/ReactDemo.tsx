@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Col, Divider, Row } from "antd";
 import TicTacToeGame from "../../components/TicTacToe";
 import FilterableProductTable from "../../components/FilterableProductTable";
+import TrackController from "../../components/custom/TrackController";
 
 function ReactComp() {
   return <>
@@ -48,6 +49,8 @@ export default function ReactDemo() {
   return (
     <>
       <ReactComp />
+      <Divider />
+      <TrackController />
       <Divider />
       <p>
         <MyButton />

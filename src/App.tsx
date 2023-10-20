@@ -1,13 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import Layout, { Content, Header } from 'antd/es/layout/layout';
-import { Col, Divider, Row } from 'antd';
-import CodeEditor from './components/CodeEditor';
-import CodeEditor2 from './components/CodeEditor2';
-import RichEditor from './components/RichEditor';
-import MarkDown from './components/MarkDown';
+import { Header } from 'antd/es/layout/layout';
 
 const About = React.lazy(() => import("./pages/About"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
@@ -58,6 +53,9 @@ function RootLayout() {
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/abc123">404</Link>
           </li>
         </ul>
       </nav>
