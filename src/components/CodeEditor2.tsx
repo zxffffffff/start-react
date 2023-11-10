@@ -1,5 +1,5 @@
 import React from 'react';
-import MonacoEditor, { MonacoDiffEditor } from 'react-monaco-editor';
+import MonacoEditor from 'react-monaco-editor';
 
 const code = `// Monaco 编辑器是 VS Code 中功能齐全的代码编辑器
 // TODO：需要配置 webpack 才有代码高亮
