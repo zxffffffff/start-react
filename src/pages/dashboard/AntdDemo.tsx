@@ -1,5 +1,5 @@
 import { SearchOutlined } from "@ant-design/icons";
-import { Button, Col, ColorPicker, DatePicker, Divider, Input, Popconfirm, Radio, RadioChangeEvent, Row, Select, Space, Tooltip, Typography } from "antd";
+import { ConfigProvider, Button, Col, ColorPicker, DatePicker, Divider, Input, Popconfirm, Radio, RadioChangeEvent, Row, Select, Space, Tooltip, Typography, Switch } from "antd";
 import Search from "antd/es/input/Search";
 import { useState } from "react";
 const { Text, Link } = Typography;
@@ -195,28 +195,52 @@ function GridDemo() {
   </>
 }
 
+
+// 参考 https://ant-design.antgroup.com/theme-editor-cn
+const whiteTheme = {
+
+};
+
+const darkTheme = {
+  
+};
+
 export default function AntdDemo() {
-  return <>
-    <Divider>文字</Divider>
-    <TextDemo />
-    <Divider>按钮</Divider>
-    <ButtonDemo />
-    <Divider>输入框</Divider>
-    <InputDemo />
-    <Divider>单选框</Divider>
-    <RadioDemo />
-    <Divider>网格</Divider>
-    <GridDemo />
-    <Divider>其他</Divider>
-    <ColorPicker showText />
-    <DatePicker />
-    <Popconfirm
-      title="气泡弹窗标题"
-      description="气泡弹窗内容12333333"
-      okText="Yes"
-      cancelText="No"
-    >
-      <Button danger>气泡弹窗</Button>
-    </Popconfirm>
-  </>
+  const [curTheme, setCurTheme] = useState(whiteTheme);
+
+  const onSwitchChange = (checked: boolean) => {
+    console.log(`switch to ${checked ? 'darkTheme' : 'whiteTheme'}`);
+    setCurTheme(checked ? darkTheme : whiteTheme);
+  };
+
+  return (
+    <ConfigProvider theme={curTheme}>
+      <Switch
+        checkedChildren="黑色主题"
+        unCheckedChildren="白色主题"
+        onChange={onSwitchChange}
+      />
+      <Divider>文字</Divider>
+      <TextDemo />
+      <Divider>按钮</Divider>
+      <ButtonDemo />
+      <Divider>输入框</Divider>
+      <InputDemo />
+      <Divider>单选框</Divider>
+      <RadioDemo />
+      <Divider>网格</Divider>
+      <GridDemo />
+      <Divider>其他</Divider>
+      <ColorPicker showText />
+      <DatePicker />
+      <Popconfirm
+        title="气泡弹窗标题"
+        description="气泡弹窗内容12333333"
+        okText="Yes"
+        cancelText="No"
+      >
+        <Button danger>气泡弹窗</Button>
+      </Popconfirm>
+    </ConfigProvider>
+  );
 }

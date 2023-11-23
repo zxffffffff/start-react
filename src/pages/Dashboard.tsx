@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import LowCodeDemo from "./dashboard/LowCodeDemo";
 
 const ReactDemo = React.lazy(() => import("./dashboard/ReactDemo"));
 const AntdDemo = React.lazy(() => import("./dashboard/AntdDemo"));
@@ -27,6 +28,11 @@ export default function Dashboard() {
             <EditorDemo />
           </React.Suspense>
         } />
+        <Route path="low-code-demo" element={
+          <React.Suspense fallback={<>lazy loading...</>}>
+            <LowCodeDemo />
+          </React.Suspense>
+        } />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
@@ -52,6 +58,9 @@ function DashboardLayout() {
             <Link to="/dashboard/editor-demo">Editor Demo</Link>
           </li>
           <li>
+            <Link to="/dashboard/low-code-demo">LowCode Demo</Link>
+          </li>
+          <li>
             <Link to="/dashboard/abc123">404</Link>
           </li>
         </ul>
@@ -73,7 +82,8 @@ function DashboardHome() {
 function NoMatch() {
   return (
     <div>
-      <h3>不存在 (404)</h3>
+      <h2>404 Not Found</h2>
+      <p>页面不存在</p>
     </div>
   );
 }

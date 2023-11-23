@@ -91,7 +91,8 @@ function Home() {
 function NoMatch() {
   return (
     <div>
-      <h2>不存在 (404)</h2>
+      <h2>404 Not Found</h2>
+      <p>页面不存在</p>
     </div>
   );
 }
